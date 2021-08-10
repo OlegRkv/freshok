@@ -1,0 +1,109 @@
+.products {
+  padding: 72px 0;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__filter {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  &__box {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  &__button {
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 3px solid transparent;
+    outline: transparent;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 11px 30px 11px;
+    padding: 50px 18px 18px 18px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2)
+  }
+  &__badge {
+    position: absolute;
+    display: block;
+    left: 12px;
+    padding: 3px 6px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    &--green {
+      top: 12px;
+      background-color: $green-900;
+    }
+    &--red {
+      top: 34px;
+      background-color: $red;
+    }
+    &--orange {
+      background-color: $orange;
+    }
+  }
+  &__like {
+    position: absolute;
+    top: 17px;
+    right: 12px;
+    width: 35px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    background-repeat: no-repeat;
+  }
+  &__img {
+    margin-bottom: 15px;
+  }
+  &__sale {
+    position: relative;
+    color: $silver-600;
+    &::before {
+      content: "";
+      border-bottom: 1px solid $silver-600;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      transform: rotate(-12deg);
+    }
+  }
+  &__add {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    width: 32px;
+    height: 32px;
+    background-color: $green-900;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    outline: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__show {
+    display: block;
+    margin: 0 auto;
+    color: $green-900;
+    background-color: transparent;
+    border: 1px solid $green-900;
+  }
+}
