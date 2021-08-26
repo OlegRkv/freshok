@@ -1,0 +1,17 @@
+.link-effect {
+  border-bottom: 1px solid transparent;
+  transition: color 0.5s, border-color 0.5s;
+
+  &:focus {
+    border-color: $white;
+    outline: transparent;
+  }
+
+  &:hover {
+    color: rgba($white, 0.7);
+  }
+
+  &:active {
+    color: rgba($white, 0.4);
+  }
+}

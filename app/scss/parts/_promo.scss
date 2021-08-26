@@ -1,0 +1,30 @@
+.promo {
+  padding: 72px 0;
+  background-color: #f5f5f5;
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+  }
+
+  &__list {
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 15px 30px 15px;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+  }
+}

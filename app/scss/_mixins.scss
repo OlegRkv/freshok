@@ -1,0 +1,6 @@
+@mixin line-clamp($lc) {
+   -webkit-line-clamp: $lc;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}

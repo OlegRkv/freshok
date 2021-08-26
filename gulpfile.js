@@ -73,12 +73,12 @@ function images() {
 }
 
 function htmlInclude() {
-  return src(['app/index.html'])
+  return src(['app/html/index.html'])
   .pipe(fileinclude({
     prefix: '@@',
     basepath: '@file'
   }))
-  .pipe(dest('dist/'))
+  .pipe(dest('app/'))
   .pipe(browserSync.stream())
 }
 
@@ -96,9 +96,10 @@ function build() {
 }
 
 function watching() {
+  watch (['app/images/icons/*.svg'], sprite);
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html'], htmlInclude);
+  watch(['app/html/**/*.html'], htmlInclude);
 }
 
 exports.styles = styles;

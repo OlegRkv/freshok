@@ -48,9 +48,11 @@ button {
 img {
   max-width: 100%;
   display: block;
+  object-fit: contain;
 }
 
 input,
+input::placeholder,
 button,
 textarea,
 select {

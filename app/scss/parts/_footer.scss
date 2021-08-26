@@ -1,0 +1,142 @@
+.footer {
+  color: #fff;
+  background-color: $dark-800;
+
+  &__top {
+    padding: 30px 0 20px 0;
+    border-bottom: 1px solid $dark-500;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+  }
+
+  &__nav {
+    max-width: 470px;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 18px;
+    @extend .link-effect;
+  }
+
+  &__address {
+    margin-bottom: 18px;
+  }
+
+  &__phone {
+    display: block;
+    margin-bottom: 18px;
+    @extend .link-effect;
+  }
+
+  &__bottom {
+    padding: 25px 0;
+    background-color: $dark-800;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__payments {
+    display: flex;
+  }
+  &__payment {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}
+
+.subscribe {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__field {
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    outline: transparent;
+    border-radius: 6px 0 0 6px;
+
+    &::placeholder {
+      font-family: "Lato", sans-serif;
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+
+  &__button {
+    padding: 12px 10px 12px 14px;
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    outline: transparent;
+    border-radius: 0 6px 6px 0;
+    letter-spacing: normal;
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -23px;
+      width: 60px;
+    }
+
+    &--facebook::before {
+      content: url("../images/sprite.svg#facebook");
+    }
+
+    &--youtube::before {
+      content: url("../images/sprite.svg#youtube");
+    }
+
+    &--telegram::before {
+      content: url("../images/sprite.svg#telegram");
+    }
+
+    &--instagram::before {
+      content: url("../images/sprite.svg#instagram");
+    }
+  }
+}
