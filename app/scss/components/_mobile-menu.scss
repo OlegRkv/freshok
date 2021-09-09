@@ -1,0 +1,196 @@
+.header {
+  &__mobile {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    color: $dark-800;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    overflow: auto;
+  }
+
+  &__mobile--active {
+    transform: translateX(0);
+  }
+
+  &__mobile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px;
+    border: 1px solid rgba($silver-600, 0.3);
+    border-bottom-color: transparent;
+  }
+
+  &__mobile-close {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 1px;
+      top: 50%;
+      left: 7px;
+      background-color: $black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__mobile-user {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 15px 0 15px 70px;
+    background-color: $green-900;
+    color: $white;
+
+    &::before {
+      position: absolute;
+      content: url(../../images/sprite.svg#user);
+      display: block;
+      width: 45px;
+      top: 10px;
+      left: 20px;
+    }
+  }
+
+  &__mobile-login {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.03em;
+
+    &:first-child {
+      margin-right: 10px;
+      padding-right: 10px;
+      border-right: 1px solid $white;
+    }
+  }
+
+  &__mobile-catalog {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 15px 0 15px 70px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid rgba($silver-600, 0.3);
+    border-bottom-color: transparent;
+  }
+
+  &__mobile-line,
+  &__mobile-line::before,
+  &__mobile-line::after {
+    position: absolute;
+    height: 1px;
+    background-color: $dark-800;
+  }
+
+  &__mobile-line {
+    width: 20px;
+    top: 25px;
+    left: 30px;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 25px;
+    }
+
+    &::before {
+      top: -9px;
+    }
+
+    &::after {
+      bottom: -9px;
+    }
+  }
+
+  &__mobile-contacts {
+    padding: 25px 20px 25px 30px;
+    border: 1px solid rgba($silver-600, 0.3);
+  }
+
+  &__mobile-address {
+    margin-bottom: 20px;
+  }
+
+  &__mobile-contact {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__mobile-contact--phone::before {
+    position: absolute;
+    content: url(../../images/sprite.svg#icon-tel);
+    width: 35px;
+    top: 0;
+    left: 0;
+  }
+
+  &__mobile-contact--address::before {
+    position: absolute;
+    content: url(../../images/sprite.svg#map);
+    width: 35px;
+    top: 0;
+    left: 0;
+  }
+
+  .social__link--facebook::before {
+    content: url(../../images/sprite.svg#facebook-icon);
+  }
+
+  .social__link--youtube::before {
+    content: url(../../images/sprite.svg#youtube-icon);
+  }
+
+  .social__link--telegram::before {
+    content: url(../../images/sprite.svg#telegram-icon);
+  }
+
+  .social__link--instagram::before {
+    content: url(../../images/sprite.svg#instagram-icon);
+  }
+
+  &__mobile-list {
+    padding: 25px 30px;
+  }
+
+  &__mobile-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__mobile-link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+}

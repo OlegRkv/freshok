@@ -5,8 +5,11 @@
 @import "vars";
 @import "effects";
 
-@import "parts/global";
+@import "global";
 @import "components/components";
+@import "components/mobile-menu";
+@import "components/search";
+@import "components/cart";
 @import "parts/header";
 @import "parts/hero";
 @import "parts/advantages";

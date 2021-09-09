@@ -4,3 +4,9 @@
    -webkit-box-orient: vertical;
    overflow: hidden;
 }
+
+@mixin media($width) {
+   @media (max-width: $width) {
+      @content
+   }
+}

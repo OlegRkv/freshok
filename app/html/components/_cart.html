@@ -1,0 +1,48 @@
+<div class="cart">
+  <div class="cart__header">
+    <span class="cart__name">Корзина</span>
+    <button class="cart__clear" type="button">
+      очистить корзину
+    </button>
+    <button class="cart__close" type="button" aria-label="закрыть корзину"></button>
+  </div>
+
+  <ul class="cart__list">
+    <li class="cart__item">
+      <img class="cart__img" src="images/products/pineapple.jpg" alt="ананас" width="80" height="60">
+      <div class="cart__info">
+        <h3 class="cart__title">Ананас, 1 кг</h3>
+        <span class="cart__price">999 <span class="cart__rub">₽</span> </span>
+      </div>
+      <div class="count cart__count">
+        <button class="count__btn count__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
+        <input class="count__num" type="text" maxlength="3" value="2" name="total">
+        <button class="count__btn count__btn--plus" type="button" aria-label="увеличить количество товара"></button>
+      </div>
+      <span class="cart__price">1998 <span class="cart__rub">₽</span> </span>
+      <button class="cart__remove" type="button" aria-label="убрать товар из корзины"></button>
+    </li>
+
+    <li class="cart__item">
+      <img class="cart__img" src="images/products/dragon-fruit.jpg" alt="питахая" width="80" height="60">
+      <div class="cart__info">
+        <h3 class="cart__title">Питахайя красная с белой мякотью, 1шт</h3>
+        <span class="cart__price">1019 <span class="cart__rub">₽</span> </span>
+      </div>
+      <div class="count cart__count">
+        <button class="count__btn count__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
+        <input class="count__num" type="text" maxlength="3" value="2" name="total">
+        <button class="count__btn count__btn--plus" type="button" aria-label="увеличить количество товара"></button>
+      </div>
+      <span class="cart__price">1998 <span class="cart__rub">₽</span> </span>
+      <button class="cart__remove" type="button" aria-label="убрать товар из корзины"></button>
+    </li>
+  </ul>
+
+  <div class="cart__total">
+    <span class="cart__total-title">Товаров на сумму</span>
+    <span class="cart__price">2038 <span class="cart__rub">₽</span> </span>
+  </div>
+
+  <a class="cart__order link-effect" href="#">Оформить заказ</a>
+</div>

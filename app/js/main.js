@@ -1,8 +1,30 @@
 $(function () {
-  /* Catalog menu */
-  $('.catalog__button').on('click', function () {
-    $('.catalog__button').toggleClass('catalog__button--active')
-    $('.catalog__list').toggleClass('catalog__list--active')
+
+  /* Burger menu */
+  $('.header__burger').on('click', function () {
+    $('.header__mobile').toggleClass('header__mobile--active')
+  })
+
+  $('.header__mobile-close').on('click', function () {
+    $('.header__mobile').toggleClass('header__mobile--active')
+  })
+
+/* Search */
+
+  $('.header__search-icon').on('click', function () {
+    $('.header__search').toggleClass('header__search--active')
+    $(".search__field").attr("placeholder", "Я ищу...");
+  })
+
+
+  /* Cart */
+
+  $('.cart__button').on('click', function () {
+    $('.cart').toggleClass('cart--active')
+  })
+
+  $('.cart__close').on('click', function () {
+    $('.cart--active').removeClass('cart--active')
   })
 
   /* Slick slider */

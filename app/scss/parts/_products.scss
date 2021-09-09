@@ -1,5 +1,5 @@
 .products {
-  padding: 70px 0;
+  padding-top: 70px;
 
   &__title {
     margin-bottom: 25px;
@@ -8,6 +8,7 @@
   &__list {
     max-width: 1320px;
     margin: 0 auto;
+    margin-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
