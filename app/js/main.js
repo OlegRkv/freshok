@@ -29,7 +29,16 @@ $(function () {
 
   /* Slick slider */
   $('.hero__slider').slick({
-    slidesToShow: 1
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
   })
 
   $('.brands').slick({
