@@ -44,7 +44,18 @@ $(function () {
   $('.brands').slick({
     slidesToShow: 6,
     arrows: false,
-
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4
+        },
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
   })
 
   /* MixItUp */

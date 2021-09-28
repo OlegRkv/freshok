@@ -10,28 +10,67 @@
   &__logo {
     display: inline-block;
     margin-bottom: 25px;
+
+    @media (max-width: $md5) {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: top;
+
+    @media (max-width: $md2) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: $md5) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__subscribe {
+    @media (max-width: $md3) {
+      margin-bottom: 20px;
+    }
   }
 
   &__nav {
-    max-width: 470px;
+    max-width: 555px;
     width: 100%;
+
+    @media (max-width: $md4) {
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    column-count: 3;
+    column-gap: 85px;
+
+    @media (max-width: $md5) {
+      margin-left: 75px;
+      column-count: 2;
+      column-gap: 20px;
+      column-width: 125px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 18px;
+
+    @media (max-width: $md5) {
+      
+    }
   }
 
   &__link {
-    display: block;
-    margin-bottom: 18px;
     @extend .link-effect;
   }
 
@@ -45,6 +84,13 @@
     @extend .link-effect;
   }
 
+  &__social {
+    @media (max-width: $md5) {
+      margin-bottom: 50px;
+      justify-content: space-between;
+    }
+  }
+
   &__bottom {
     padding: 25px 0;
     background-color: $dark-800;
@@ -54,11 +100,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $md5) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__payments {
     display: flex;
+
+    @media (max-width: $md5) {
+      margin-bottom: 25px;
+    }
   }
+
   &__payment {
     &:not(:last-child) {
       margin-right: 25px;
