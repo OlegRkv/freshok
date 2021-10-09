@@ -33,8 +33,8 @@ function sprite() {
 
 function styles() {
   return src('app/scss/style.scss')
-  .pipe(scss({outputStyle: 'expanded'}))
-  .pipe(concat('style.css'))
+  .pipe(scss({outputStyle: 'compressed'}))
+  .pipe(concat('style.min.css'))
   .pipe(autoprefixer({
     overrideBrowserslist: ['last 10 versions'],
     grid: true
@@ -46,6 +46,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
     'app/js/main.js',
     'app/js/slick.min.js',
     'app/js/mixitup.min.js'
@@ -73,7 +74,7 @@ function images() {
 }
 
 function htmlInclude() {
-  return src(['app/html/index.html'])
+  return src(['app/html/*.html'])
   .pipe(fileinclude({
     prefix: '@@',
     basepath: '@file'

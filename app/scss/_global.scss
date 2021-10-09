@@ -31,3 +31,38 @@ main {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.breadcrumbs {
+  display: flex;
+  &__item {
+    position: relative;
+    margin-right: 6px;
+    padding-right: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 10px;
+      right: 0;
+      top: 5px;
+      background-image: url("../images/icons/chevron.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    &:last-child::after {
+      background-image: none;
+    }
+  }
+
+  &__link {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+  }
+}

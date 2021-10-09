@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог товаров</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  @@include("parts/_header.html")
+  @@include("components/_cart.html")
+
+  <main class="main">
+
+    <div class="breadcrumbs-wrapper">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link" href="#">Каталог товаров</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="catalog">
+      <div class="container">
+        <h1 class="title catalog__title">Каталог товаров</h1>
+
+        @@include("components/_filters.html")
+      </div>
+    </section>
+
+    
+
+  </main>
+
+
+  @@include("parts/_footer.html")
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -58,6 +58,13 @@ $(function () {
     ]
   })
 
+  /* Filters */
+  $('.filters__btn').on('click', function() {
+    $(this).toggleClass('filters__btn--active')
+  })
+
+  $(".filters__range").ionRangeSlider();
+
   /* MixItUp */
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
@@ -70,4 +77,6 @@ $(function () {
 
   var mixer1 = mixitup(containerEl1, config);
   var mixer1 = mixitup(containerEl2, config);
+
+
 });
