@@ -117,12 +117,16 @@
   <li class="filters__item filters__btn--active">
     <button class="filters__btn">Цена</button>
     <div class="filters__item-wrapper">
+      <div class="filters__item-controls">
+        <label class="filters__item-label">
+          от <input type="text" class="filters__item-input js-input-from" value="100"> ₽
+        </label>
+        <label class="filters__item-label">
+          до <input type="text" class="filters__item-input js-input-to" value="1000"> ₽
+        </label>
+      </div>
       <div class="filters__item-range">
         <input type="text" class="filters__range" name="my_range">
-      </div>
-      <div class="filters__item-controls">
-        <input type="text" class="js-input-from" value="100">
-        <input type="text" class="js-input-to" value="1000">
       </div>
     </div>
   </li>

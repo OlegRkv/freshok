@@ -63,7 +63,83 @@ $(function () {
     $(this).toggleClass('filters__btn--active')
   })
 
-  $(".filters__range").ionRangeSlider();
+  /* Range slider */
+
+  var $range = $(".filters__range"),
+    $inputFrom = $(".js-input-from"),
+    $inputTo = $(".js-input-to"),
+    instance,
+    min = 0,
+    max = 1000,
+    from = 0,
+    to = 0;
+
+  $range.ionRangeSlider({
+    skin: "round",
+    type: "double",
+    min: min,
+    max: max,
+    from: 200,
+    to: 800,
+    onStart: updateInputs,
+    onChange: updateInputs
+  });
+  instance = $range.data("ionRangeSlider");
+
+  function updateInputs (data) {
+    from = data.from;
+      to = data.to;
+      
+      $inputFrom.prop("value", from);
+      $inputTo.prop("value", to);	
+  }
+
+  $inputFrom.on("input", function () {
+      var val = $(this).prop("value");
+      
+      // validate
+      if (val < min) {
+          val = min;
+      } else if (val > to) {
+          val = to;
+      }
+      
+      instance.update({
+          from: val
+      });
+  });
+
+  $inputTo.on("input", function () {
+      var val = $(this).prop("value");
+      
+      // validate
+      if (val < from) {
+          val = from;
+      } else if (val > max) {
+          val = max;
+      }
+      
+      instance.update({
+          to: val
+      });
+  });
+
+  /* Form styler */
+  $('.catalog-page__content-select').styler();
+
+  /* Catalog grid*/
+  $('.catalog-page__content-btn').on('click', function() {
+    $('.catalog-page__content-btn').removeClass('catalog-page__content-btn--active')
+    $(this).addClass('catalog-page__content-btn--active')
+  });
+
+  $('.catalog-page__content-btn--list').on('click', function(){
+    $('.catalog-page__list').addClass('catalog-page__list--list')
+  });
+
+  $('.catalog-page__content-btn--grid').on('click', function(){
+    $('.catalog-page__list').removeClass('catalog-page__list--list')
+  });
 
   /* MixItUp */
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
