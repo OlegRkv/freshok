@@ -63,6 +63,14 @@ $(function () {
     $(this).toggleClass('filters__btn--active')
   })
 
+  $('.catalog-page__filter-mobile').on('click', function(){
+    $('.filters').addClass('filters--active')
+  });
+
+  $('.filters__close').on('click', function(){
+    $('.filters--active').removeClass('filters--active')
+  });
+
   /* Range slider */
 
   var $range = $(".filters__range"),

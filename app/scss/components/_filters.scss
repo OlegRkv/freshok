@@ -1,7 +1,75 @@
 .filters {
   margin-right: 30px;
-  max-width: 300px;
-  width: 100%;
+  min-width: 300px;
+
+  @media (max-width: $md3) {
+    margin-right: 25px;
+  }
+
+  @media (max-width: $md4) {
+    position: fixed;
+    width: 320px;
+    height: 100vh;
+    margin-right: 0;
+    padding-top: 75px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 12;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  &--active {
+    @media (max-width: $md4) {
+      transform: translateX(0);
+    }
+  }
+
+  &__close {
+    display: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 2px;
+      background-color: $dark-900;
+      top: 20px;
+      left: 15px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    @media (max-width: $md4) {
+      display: block;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+   &__list {
+     max-width: 300px;
+     width: 100%;
+     
+     @media (max-width: $md4) {
+       padding-bottom: 50px;
+       height: 100vh;
+       overflow: auto;
+     }
+   }
 
   &__item {
     margin-bottom: 30px;
@@ -37,11 +105,6 @@
     display: block;
   }
 
-  &__list {
-    height: 300px;
-    overflow: auto;
-  }
-
   &__list-link {
     display: inline-block;
     padding: 7px 0;
@@ -54,6 +117,11 @@
     &:hover {
       border-color: $dark-500;
     }
+  }
+
+  &__links {
+    max-height: 365px;
+    overflow: auto;
   }
 
   &__label {
